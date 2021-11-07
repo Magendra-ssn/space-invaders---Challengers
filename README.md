@@ -15,6 +15,6 @@ Check 3 :
 
 To get the size of obstacle : The external tank cameras in the spaceship take pictures every 0.1 seconds and using OpenCV in python we split a image into several pieces and will compare it with existing images of obstacles in databases ( both private and public ) and using numpy we find the size of the obstacle. This is also another check to ensure no obstacle crosses paths with the spaceship.
 
-Action : Once we know the distance to collision and size of the obstacle - Let the distance to collsion be 'a' and size of obstacle be 'b' . The spaceship will deviate from the reference trajectory at a distance of 2*a from the obstacle and deviate by a distance of (b+20) mm from the obstacle. Check 1 is repeated with new speherical coordinates of the spaceship.
+Action : Once we know the distance to collision and size of the obstacle - Let the distance to collsion be 'a' and size of obstacle be 'b' . The spaceship will deviate from the reference trajectory at a distance of 2*a from the obstacle and deviate by a distance of (b+20) mm from the obstacle. Check 1 is repeated with new speherical coordinates of the spaceship and will also help finding the direction of deviation.
 
 
