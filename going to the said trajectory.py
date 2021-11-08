@@ -8,7 +8,7 @@ import math
 '''Used to set rocket on trajectory to target landing site
 Should be able to go both from orbit and from sub-orbital trajectory (on a boostback burn, for example)'''
 
-# Predict landing trajectory
+# landing trajectory
 def predict_impact_coordinates(connection, spacecenter, vessel, flight):
     acceleration = vessel.orbit.body.surface_gravity
     velocity0_z, velocity0_y, velocity0_x = flight.velocity
