@@ -15,6 +15,8 @@ Check 3 :
 
 To get the size of obstacle : The external tank cameras in the spaceship take pictures every 0.1 seconds and using OpenCV in python we split a image into several pieces and will compare it with existing images of obstacles in various databases ( both private and public ) and using numpy we find the size of the obstacle. This is also another check to ensure no obstacle crosses paths with the spaceship. Moreover if a obstacle like a private spaceship not listed in our list of obstacles is going to cross paths with our spaceship Check 2 and Check 3 will ensure to avoid it.
 
-Action : Once we know the distance to collision and size of the obstacle - Let the distance to collsion be 'a' and size of obstacle be 'b' . The spaceship will deviate from the reference trajectory at a distance of 2*a from the obstacle and deviate by a distance of (b+20) mm from the obstacle. We locate all possible coordinates the spaceship can deviate to and check 1 is done with all possible new spherical coordinates of the spaceship to find the trajectory with least obstacles and so the direction of deviation of spaceship is determined and that trajectory is followed to deviate.
+Action : Once we know the distance to collision and size of the obstacle - Let the distance to collsion be 'a' and size of obstacle be 'b' . The spaceship will deviate from the reference trajectory at a distance of 2*a from the obstacle and deviate by a distance of 2*b mm from the obstacle. We locate all possible coordinates the spaceship can deviate to and check 1 is done with all possible new spherical coordinates of the spaceship to find the trajectory with least obstacles and so the direction of deviation of spaceship is determined and that trajectory is followed to deviate.
 
-This way the spaceship covers least distance to the destination and also has no chance of collision with any form of space debris.
+This way the spaceship covers least distance to the destination and also has no chance of collision with any form of space debris. 
+
+Note : This project needs real time data and will work in real-world scenarios.
